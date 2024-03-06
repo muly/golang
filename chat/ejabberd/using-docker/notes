@@ -1,0 +1,38 @@
+ejabberdctl locally :::::::::::::
+    docker pull ejabberd/ecs
+
+    docker run -p 5280:5280 -p 5443:5443 --name ejabberd-server ejabberd/ecs
+
+    docker exec -it ejabberd-server /bin/sh
+
+    cd /home/ejabberd/bin/
+
+    ./ejabberdctl register admin localhost admin
+
+    ./ejabberdctl registered_users localhost
+        admin
+        muly
+        sandeep
+
+    ./ejabberdctl oauth_issue_token admin@localhost 33334444 ejabberd:admin
+        Error when access is not configured    
+            Error: error
+            Error: access_denied
+
+        solution: add the below top level option in config file
+            oauth_access: all
+
+        B1aHcXEVCPrm86pGuMN29YrjTlWpyuOd        [<<"ejabberd:admin">>]  33334444 seconds
+
+        read more: https://docs.ejabberd.im/developer/ejabberd-api/oauth/#authorization-token
+
+    ./ejabberdctl send_message 
+        ./ejabberdctl send_message chat MULY@localhost sandeep@localhost "subject 1" "HELLO MESSAGE"
+
+            https://localhost:5443/admin/server/localhost/users/
+            User	            Offline Messages	Last Activity
+            admin@localhost	    0	                2022-01-15 21:05:59
+            muly@localhost	    0	                2022-01-15 21:06:37
+            sandeep@localhost	1	                2022-01-15 21:06:38
+
+
