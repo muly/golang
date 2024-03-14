@@ -99,7 +99,7 @@ func (h *handler) ConsumeClaim(s sarama.ConsumerGroupSession, claim sarama.Consu
 		//
 
 		// mark the message as read
-		s.MarkMessage(message, "")
+		// s.MarkMessage(message, "")
 	}
 	return nil
 }

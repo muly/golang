@@ -13,14 +13,20 @@
         docker exec -it kafka /bin/sh
 
     3) create topic: from the kafka terminal
-        cd /opt/kafka_2.13-2.6.0/bin
-        ./kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 1 --topic topic123      
+        note: replace `kafka_2.13-2.6.0` in below command with the approximate folder name with the correct version number
+        cd /opt/kafka_2.13-2.6.0/bin 
+        ./kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 4 --topic topic123      
 
     4) list topics
         ./kafka-topics.sh --list --zookeeper zookeeper:2181
 
-
-
+    5) topics and their offset information
+        ./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group count_errors --describe
+        ./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --all-groups --describe
+        ./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --all-groups  --describe --offsets
+  
+    6) list consumer groups
+        ./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
 
 ## running the producer:
     go run producer.go 

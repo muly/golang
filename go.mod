@@ -8,7 +8,7 @@ require (
 	github.com/AdRoll/goamz v0.0.0-20170825154802-2731d20f46f4
 	github.com/IBM/sarama v1.43.0
 	github.com/Netflix/go-expect v0.0.0-20220104043353-73e0943537d2
-	github.com/PuerkitoBio/goquery v1.5.1
+	github.com/PuerkitoBio/goquery v1.9.1
 	github.com/ansel1/merry v1.8.0
 	github.com/aws/aws-lambda-go v1.46.0
 	github.com/aws/aws-sdk-go v1.50.32
@@ -74,7 +74,7 @@ require (
 	github.com/Microsoft/go-winio v0.6.1 // indirect
 	github.com/Nvveen/Gotty v0.0.0-20120604004816-cd527374f1e5 // indirect
 	github.com/advancedlogic/GoOse v0.0.0-20191112112754-e742535969c1 // indirect
-	github.com/andybalholm/cascadia v1.2.0 // indirect
+	github.com/andybalholm/cascadia v1.3.2 // indirect
 	github.com/ansel1/merry/v2 v2.0.1 // indirect
 	github.com/araddon/dateparse v0.0.0-20200409225146-d820a6159ab1 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect

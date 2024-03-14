@@ -13,6 +13,6 @@ very good kafka consumer group ref:
 
 
 setup: 
-    - kafka: for setup see instructions in /golang/message-bus/kafka/hello-kafka/notes file
+    - kafka: for setup see instructions in /message-bus/kafka/hello-kafka/notes file
     - topic: after creating the kafka server, to create the topic, see the same notes file
-    - producer: for producer use /golang/message-bus/kafka/hello-kafka/producer.go code
+    - producer: for producer use /message-bus/kafka/hello-kafka/producer.go code
