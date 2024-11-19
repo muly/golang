@@ -50,7 +50,7 @@ func main() {
 	}
 
 	// Save the image as PNG
-	outputFile := "output.png"
+	outputFile := "./graphics/2d/fogleman_gg/output.png"
 	if err := dc.SavePNG(outputFile); err != nil {
 		log.Fatalf("Failed to save image: %v", err)
 	}
