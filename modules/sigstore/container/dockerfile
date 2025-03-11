@@ -1,0 +1,3 @@
+FROM scratch
+# print a echo message
+CMD ["echo", "Hello, World!"]
